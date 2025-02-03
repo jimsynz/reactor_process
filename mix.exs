@@ -1,4 +1,4 @@
-defmodule Reactor.Supervisor.MixProject do
+defmodule Reactor.Process.MixProject do
   @moduledoc """
   A Reactor extension which provides steps for working with supervisors.
   """
@@ -9,16 +9,16 @@ defmodule Reactor.Supervisor.MixProject do
   def project do
     [
       aliases: aliases(),
-      app: :reactor_supervisor,
+      app: :reactor_process,
       consolidate_protocols: Mix.env() != :dev,
       deps: deps(),
       description: @moduledoc,
       docs: docs(),
       elixir: "~> 1.17",
       elixirc_paths: elixirc_paths(Mix.env()),
-      homepage_url: "https://harton.dev/james/reactor_supervisor",
+      homepage_url: "https://harton.dev/james/reactor_process",
       package: package(),
-      source_url: "https://harton.dev/james/reactor_supervisor",
+      source_url: "https://harton.dev/james/reactor_process",
       start_permanent: Mix.env() == :prod,
       version: @version
     ]
@@ -33,19 +33,19 @@ defmodule Reactor.Supervisor.MixProject do
 
   defp package do
     [
-      name: :reactor_supervisor,
+      name: :reactor_process,
       files: ~w[lib .formatter.exs mix.exs README* LICENSE* CHANGELOG* documentation],
       licenses: [],
       links: %{
-        "Source" => "https://harton.dev/james/reactor_supervisor",
-        "GitHub" => "https://github.com/jimsynz/reactor_supervisor",
-        "Changelog" => "https://harton.dev/james/reactor_supervisor/src/branch/main/CHANGELOG.md",
+        "Source" => "https://harton.dev/james/reactor_process",
+        "GitHub" => "https://github.com/jimsynz/reactor_process",
+        "Changelog" => "https://harton.dev/james/reactor_process/src/branch/main/CHANGELOG.md",
         "Sponsor" => "https://github.com/sponsors/jimsynz"
       },
       maintainers: [
         "James Harton <james@harton.nz>"
       ],
-      source_url: "https://harton.dev/james/reactor_supervisor"
+      source_url: "https://harton.dev/james/reactor_process"
     ]
   end
 
@@ -73,10 +73,9 @@ defmodule Reactor.Supervisor.MixProject do
         "docs",
         "spark.replace_doc_links"
       ],
-      "spark.formatter": "spark.formatter --extensions Reactor.Supervisor",
-      "spark.cheat_sheets": "spark.cheat_sheets --extensions Reactor.Supervisor",
-      "spark.cheat_sheets_in_search":
-        "spark.cheat_sheets_in_search --extensions Reactor.Supervisor"
+      "spark.formatter": "spark.formatter --extensions Reactor.Process",
+      "spark.cheat_sheets": "spark.cheat_sheets --extensions Reactor.Process",
+      "spark.cheat_sheets_in_search": "spark.cheat_sheets_in_search --extensions Reactor.Process"
     ]
   end
 
@@ -89,12 +88,12 @@ defmodule Reactor.Supervisor.MixProject do
       groups_for_extras: extra_documentation_groups(),
       main: "readme",
       source_url_pattern:
-        "https://harton/dev/james/reactor_supervisor/src/branch/main/%{path}#L%{line}",
+        "https://harton/dev/james/reactor_process/src/branch/main/%{path}#L%{line}",
       spark: [
         extension: [
           %{
-            module: Reactor.Supervisor,
-            name: "Reactor.Supervisor",
+            module: Reactor.Process,
+            name: "Reactor.Process",
             target: "Reactor",
             type: "Reactor"
           }

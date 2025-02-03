@@ -1,7 +1,7 @@
 if Code.ensure_loaded?(Igniter) do
-  defmodule Mix.Tasks.ReactorSupervisor.Install do
+  defmodule Mix.Tasks.ReactorProcess.Install do
     @moduledoc """
-    Installs Reactor.Supervisor into a project.  Should be called with `mix igniter.install reactor_supervisor`.
+    Installs Reactor.Process into a project.  Should be called with `mix igniter.install reactor_process`.
     """
 
     alias Igniter.{Mix.Task, Project.Formatter}
@@ -12,20 +12,20 @@ if Code.ensure_loaded?(Igniter) do
     @impl Task
     def igniter(igniter, _argv) do
       igniter
-      |> Formatter.import_dep(:reactor_supervisor)
+      |> Formatter.import_dep(:reactor_process)
     end
   end
 else
-  defmodule Mix.Tasks.ReactorSupervisor.Install do
+  defmodule Mix.Tasks.ReactorProcess.Install do
     @moduledoc """
-    Installs Reactor.Supervisor into a project.  Should be called with `mix igniter.install reactor_supervisor`.
+    Installs Reactor.Process into a project.  Should be called with `mix igniter.install reactor_process`.
     """
 
     use Mix.Task
 
     def run(_argv) do
       Mix.shell().error("""
-      The task 'reactor_supervisor.install' requires igniter to be run.
+      The task 'reactor_process.install' requires igniter to be run.
 
       Please install igniter and try again.
 

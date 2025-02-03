@@ -1,7 +1,7 @@
-# Reactor.Supervisor
+# Reactor.Process
 
-[![Build Status](https://drone.harton.dev/api/badges/james/reactor_supervisor/status.svg)](https://drone.harton.dev/james/reactor_supervisor)
-[![Hex.pm](https://img.shields.io/hexpm/v/reactor_supervisor.svg)](https://hex.pm/packages/reactor_supervisor)
+[![Build Status](https://drone.harton.dev/api/badges/james/reactor_process/status.svg)](https://drone.harton.dev/james/reactor_process)
+[![Hex.pm](https://img.shields.io/hexpm/v/reactor_process.svg)](https://hex.pm/packages/reactor_process)
 [![Hippocratic License HL3-FULL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-FULL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/full.html)
 
 A [Reactor](https://github.com/ash-project/reactor) extension that provides steps for working with supervisors and processes.
@@ -12,7 +12,7 @@ The following example uses Reactor to start a supervisor and add children to it.
 
 ```elixir
 defmodule StartAllReposReactor do
-  use Reactor, extensions: [Reactor.Supervisor]
+  use Reactor, extensions: [Reactor.Process]
 
   start_supervisor :supervisor
 
@@ -62,22 +62,22 @@ Reactor.run!(StartAllReposReactor, %{directory: "./to_reverse"})
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `reactor_supervisor` to your list of dependencies in `mix.exs`:
+by adding `reactor_process` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:reactor_supervisor, "~> 0.18.0"}
+    {:reactor_process, "~> 0.18.0"}
   ]
 end
 ```
 
-Documentation for the latest release is available on [HexDocs](https://hexdocs.pm/reactor_supervisor).
+Documentation for the latest release is available on [HexDocs](https://hexdocs.pm/reactor_process).
 
 ## Github Mirror
 
-This repository is mirrored [on Github](https://github.com/jimsynz/reactor_supervisor)
-from it's primary location [on my Forgejo instance](https://harton.dev/james/reactor_supervisor).
+This repository is mirrored [on Github](https://github.com/jimsynz/reactor_process)
+from it's primary location [on my Forgejo instance](https://harton.dev/james/reactor_process).
 Feel free to raise issues and open PRs on Github.
 
 ## License

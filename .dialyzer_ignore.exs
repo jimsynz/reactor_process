@@ -1,4 +1,4 @@
 [
-  ~r/lib\/mix\/tasks\/reactor_supervisor\.install\.ex.*/,
+  ~r/lib\/mix\/tasks\/reactor_process\.install\.ex.*/,
   ~r/test\/.*/
 ]

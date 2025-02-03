@@ -1,4 +1,4 @@
-defmodule Reactor.Supervisor do
+defmodule Reactor.Process do
   @moduledoc """
   An extensions which provides steps for working with supervisors.
   """
