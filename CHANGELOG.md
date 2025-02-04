@@ -5,4 +5,13 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.2.0](https://harton.dev/james/reactor_process/compare/v0.1.0...v0.2.0) (2025-02-04)
+
+
+
+
+### Features:
+
+* Add `start_link` DSL step. (#1)
+
 ## [v0.1.0](https://harton.dev/james/reactor_process/compare/v0.1.0...v0.1.0) (2025-02-03)
